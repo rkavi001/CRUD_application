@@ -24,7 +24,7 @@ function readAll() {
                 <td>${record.email}</td>
                 <td>
                     <button class="edit" onclick={edit(${record.id})}>Edit</button>
-                    <button class="delete">Delete</button>
+                    <button class="delete" onclick={delet(${record.id})}>Delete</button>
                 </td>
             </tr>
         `;
@@ -32,6 +32,11 @@ function readAll() {
 
     // Append the constructed rows to the table body
     tabledata.innerHTML = elements;
+}
+
+function delet(id){
+   data=  data.filter(rec=> rec.id !== id);
+    readAll();
 }
 
 function create(){
