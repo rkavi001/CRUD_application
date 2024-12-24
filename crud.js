@@ -34,3 +34,23 @@ function readAll() {
     tabledata.innerHTML = elements;
 }
 
+function create(){
+     document.querySelector(".create_form").style.display = "block";
+     document.querySelector(".add_div").style.display = "none";
+}
+
+function add(){
+    var name=document.querySelector(".name").value;
+    var email=document.querySelector(".email").value;
+
+    var newObj = {id: 3, name: name, email: email};
+    data.push(newObj);
+
+    document.querySelector(".create_form").style.display = "none";
+    document.querySelector(".add_div").style.display = "block";
+
+    readAll();
+}
+
+
+
