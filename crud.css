@@ -60,3 +60,11 @@ table{
 .update_form, .create_form{
     display: none;
 }
+table .edit{
+   background-color: rgb(40, 136, 40);
+   color: white;
+}
+table .delete{
+    background-color: rgb(170, 61, 61);
+    color: white;
+}

@@ -23,8 +23,8 @@ function readAll() {
                 <td>${record.name}</td>
                 <td>${record.email}</td>
                 <td>
-                    <button>Edit</button>
-                    <button>Delete</button>
+                    <button class="edit" onclick={edit(${record.id})}>Edit</button>
+                    <button class="delete">Delete</button>
                 </td>
             </tr>
         `;
@@ -52,5 +52,35 @@ function add(){
     readAll();
 }
 
+function edit(id){
+    document.querySelector('.update_form').style.display="block";
+    var obj=data.find(record => record.id ===id);
+    if(obj){
+    document.querySelector('.uname').value=obj.name;
+    document.querySelector('.uemail').value=obj.email;
+    document.querySelector('.id').value=obj.id;
+    }
+}
 
+function update(){
+    var id = parseInt(document.querySelector('.id').value);
+    var name = document.querySelector('.uname').value;
+    var email = document.querySelector('.uemail').value;
+
+    // Find the index of the object to update
+    var index = data.findIndex(rec => rec.id === id);
+
+    if (index !== -1) {
+        data[index] = { id, name, email };
+
+        // Update localStorage
+        localStorage.setItem("object", JSON.stringify(data));
+
+        // Refresh the table
+        readAll();
+
+        // Hide the update form
+        document.querySelector('.update_form').style.display = "none";
+    }
+}
 
