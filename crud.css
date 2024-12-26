@@ -1,4 +1,4 @@
-.container{
+/* .container{
     display: flex;
     height: 100px;
     justify-content: center;
@@ -67,4 +67,75 @@ table .edit{
 table .delete{
     background-color: rgb(170, 61, 61);
     color: white;
-}
+} */
+
+.container {
+    display: flex;
+    height: 100px;
+    justify-content: center;
+    background-color: rgb(122, 226, 226);
+    }
+    .form_container {
+    margin-top: 20px;
+    width: 40vw;
+    border-radius: 10px;
+    height: 80vh;
+    background-color: rgb(190, 204, 166);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    }
+    form input {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid black;
+    }
+    form button {
+    padding: 10px;
+    background-color: rgb(140, 220, 140);
+    color: rgb(25, 2, 2);
+    border-radius: 7px;
+    cursor: pointer;
+    }
+    .add_div {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    }
+    .add_div button {
+    padding: 8px;
+    background-color: rgb(99, 133, 99);
+    color: rgb(2, 1, 0);
+    border-radius: 7px;
+    }
+    .add_div_button {
+    padding: 2px;
+    align-items: center;
+    }
+    .add_div button:hover {
+    background-color: rgb(117, 202, 117);
+    cursor: pointer;
+    }
+    table {
+    width: 100%;
+    margin-top: 50px; /* Adjusted to add space below the Add+ button */
+    text-align: center;
+    }
+    .create_form {
+    padding: 10px;
+    }
+    .update_form {
+    padding: 10px;
+    }
+    .update_form, .create_form {
+    display: none;
+    }
+    table .edit {
+    background-color: rgb(40, 136, 40);
+    color: white;
+    }
+    table .delete {
+    background-color: rgb(170, 61, 61);
+    color: white;
+    }
